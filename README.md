@@ -1,10 +1,10 @@
-# OctoPaul
+# Holocron
 In the ever-evolving field of cybersecurity, staying informed is essential, but the sheer volume of information can be overwhelming. This project aims to simplify the process by aggregating open data from various sources and utilizing AI to summarize, evaluate, and organize it based on relevant keywords. The objective is to make it easier and faster to find the most important and relevant information.
 
 ## Initial blueprint
 As it is a learning project, I think it is important that the different components are modular so that they can be modified without affecting the whole system. The main parts will be:
-- **Crawlers** (*tentacles*): there will be multiple crawlers to ingest information from different sources and store the data into a shared bus like Kafka or RabbitMQ (they also will have to control repeated information from different sources).
-- **IA** (*brain*): the artificial intelligence models will process the information from the bus and store it in the DB (I would like to use multiple local or remote models for different purposes).
+- **Crawlers**: there will be multiple crawlers to ingest information from different sources and store the data into a shared bus like Kafka or RabbitMQ (they also will have to control repeated information from different sources).
+- **IA**: the artificial intelligence models will process the information from the bus and store it in the DB (I would like to use multiple local or remote models for different purposes).
 - **Database**: the database will contain metadata of the different blogs (source, date, tags, rating, ...) and a summary of the content in markdown format that could be consulted from a web application.
 
 ![Diagram](https://github.com/user-attachments/assets/12703e93-02f6-40c4-be3f-fdc9e9fc3aaf)
@@ -24,3 +24,11 @@ Daniel Miessler's [**fabric**](https://github.com/danielmiessler/fabric) project
 
 ### Database
 For the database I think is best to split the content in a non-relational database (such as mongodb or elasticsearch), and use a relational database to control what content has been ingested and not repeat the analysis.
+
+## Purpose
+1) Sumarize
+2) Categorize
+3) Extract keywords
+4) Extract take-aways
+5) Rate the content
+6) Relate with other content
