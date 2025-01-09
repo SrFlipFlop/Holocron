@@ -16,7 +16,8 @@ For the content analysis I want to test different options to see which is the mo
 
 Daniel Miessler's [**fabric**](https://github.com/danielmiessler/fabric) project can be of great help as it contains a large number of prompts (*patterns*) and allows you to connect with different models. At first I'm going to manually test **fabric** to see if it can fit in the project, and then I'm going to see how it could interact programmatically with another language (either by creating a Python library or modifying the project to have an API).
 
-### Tentacles
+### Crawlers
+The first approach to obtain information will be simple to program and will allow the whole system to process information. I will use a Telegram bot that will be in charge of obtaining the posts that I share through that channel (this way I will be able to manually filter the content). Another way I have considered is to create a simple web application that allows me to send URLs manually. I will start recolecting posts from the following sources:
 - LinkedIn
 - Telegram
 - X (Twitter)
